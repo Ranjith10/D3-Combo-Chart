@@ -1,0 +1,149 @@
+#axis line {
+    visibility: hidden;
+}
+#axis path {
+    visibility: hidden;
+}
+.actual-line {
+    stroke: #0D2EDE;
+    stroke-width: 2px;
+    fill: none;
+    transform: translate(20px, 0);
+}
+.predicted-line {
+    stroke: #0EDCE8;
+    stroke-width: 2px;
+    fill: none;
+    transform: translate(20px, 0);
+}
+.rect-impact {
+    stroke: none;
+    width: 40px;
+}
+.rect-impact.positive {
+    fill: #2ABD6B;
+}
+.rect-impact.negative {
+    fill: #EA304F;
+}
+#tooltip {
+    position: absolute;
+    width: 185px;
+    background: #FFFFFF;;
+    padding:5px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.12);
+    font-size: 12px;
+    text-align: left;
+}
+.left-align::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:10px solid #FFFFFF; 
+    position: absolute;
+    top: 30px;
+    left: -10px;
+}
+.right-align::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left:10px solid #FFFFFF;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+}
+.impact-value {
+    fill: #666666;
+    font-size: 11px;
+    text-anchor: middle;
+}
+.d3-actual {
+    color: #000000;
+    font-size: 18px;
+    /* font-weight: 500; */
+}
+.d3-span-month {
+    color: #325C6A;
+    text-transform: capitalize;
+    font-size: 12px;
+    line-height: 16px;
+}
+.d3-kpi-title {
+    color: #B9C0C6;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.d3-kpi-sub-title {
+    color: #B9C0C6;
+    font-size: 12px;
+}
+.chart-text , text.chart-text {
+    font-size: 12px;
+    /* font-family: IBM Plex Sans; */
+    font-style: normal;
+    font-weight: normal;
+}
+.chart-text {
+    color: #979797;
+}
+text.chart-text {
+    fill: #979797;
+}
+.chart-text path {
+    visibility: hidden;
+}
+.tick line {
+    stroke: #EFEFEF;
+}
+.legend-container{
+    display: flex;
+    justify-content: center;
+    color: #979797;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.impact-legend-container{
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+.actual-legend-container{
+    display: flex;
+    align-items: center;
+}
+.forecasted-legend-container{
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+}
+.legend-impact-box{
+    width: 15px;
+    height: 20px;
+    background: #2ABD6B;
+    margin-right: 10px;
+}
+.legend-impact-box-inner{
+    width: 15px;
+    height: 10px;
+    background: #EA304F;
+    margin-top: 10px;
+}
+.legend-actual-line{
+    width: 25px;
+    height: 5px;
+    background: #0D2EDE;
+    margin-right: 10px;
+}
+.legend-forecasted-line{
+    width: 25px;
+    height: 5px;
+    background: #0EDCE8;
+    margin-right: 10px;
+}
