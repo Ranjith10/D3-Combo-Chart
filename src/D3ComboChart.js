@@ -83,6 +83,8 @@ const data = [
       
     ]
 const getComboChart = (data) => {
+    //To avoid multiple charts getting rendered on componentDiiUpdate
+    //Remove the svg after every update and paint the svg again
     d3.select('#impact-chart').remove();
 
     //Define margin, height, width
@@ -303,7 +305,8 @@ const getComboChart = (data) => {
                 return 'right-align'
             }
         })
-
+        
+        //Add tooltip on hover  
         tooltip.html(`<span class = 'd3-kpi-title'>Kpi</span> <span class = 'd3-kpi-sub-title'>(in Units)</span>`)
             .style('display', 'block')
             .style('left', (d3.event.pageX < thresholdWidth ? (d3.event.pageX + 20) : (d3.event.pageX - 195)) +'px')
